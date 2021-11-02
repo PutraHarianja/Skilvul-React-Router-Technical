@@ -22,7 +22,6 @@ const MovieList = () => {
   };
 
   // Variable yang akan menyimpan data-data yang sudah difilter menggunakan variable filter diatas
-  console.log(filter.sort == "title")
   const filteredMovies =
     movies
       .filter((item) => item.type == filter.category)

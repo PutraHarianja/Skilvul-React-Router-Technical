@@ -4,7 +4,9 @@ import data from "../dummy-data";
 const Movie = () => {
   // Variable berikut akan menampung data movie yang akan kita tampilkan
   let {id} = useParams();
+
   const movie = data.find((item) => item.mal_id == id)
+  
   if(movie === undefined){
     return <Redirect  to="/*"/>
   }

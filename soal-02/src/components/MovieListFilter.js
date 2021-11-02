@@ -8,7 +8,6 @@ const MovieListFilter = () => {
 
   const history = useHistory();
 
-
   const shows = [10, 20, 30];
   const categories = ["TV", "Movie"];
   const fields = ["title", "score"];

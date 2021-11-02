@@ -6,7 +6,6 @@ import movies from "../dummy-data";
 
 const MovieList = () => {
 
-
   const shows = [10, 20, 30];
   const categories = ["TV", "Movie"];
   const fields = ["title", "score"];
@@ -24,17 +23,13 @@ const MovieList = () => {
 
   // Variable yang akan menyimpan data-data yang sudah difilter menggunakan variable filter diatas
   console.log(filter.sort == "title")
-  const filteredMovies = 
-  movies
-  .filter((item) => item.type == filter.category)
-  .sort(function(a, b){
-    // if(a[filter.sort] < b[filter.sort]) { return -1; }
-    // if(a[filter.sort] > b[filter.sort]) { return 1; }
-    return ((a[filter.sort] > b[filter.sort]) ? 1 : ((a[filter.sort] < b[filter.sort]) ? -1 : 0))
-})
-  .slice(0, filter.show)
-
-
+  const filteredMovies =
+    movies
+      .filter((item) => item.type == filter.category)
+      .sort(function (a, b) {
+        return ((a[filter.sort] > b[filter.sort]) ? 1 : ((a[filter.sort] < b[filter.sort]) ? -1 : 0))
+      })
+      .slice(0, filter.show)
 
   return (
     <div className="row">
